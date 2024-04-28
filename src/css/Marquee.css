@@ -1,0 +1,23 @@
+div.marquee-container {
+  width: 100%;
+}
+
+.marquee-content {
+  display: flex;
+  gap: 3rem; 
+  animation: marquee-scroll 1400s linear infinite; 
+}
+
+.relative:hover p {
+  color: white !important;
+}
+
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
