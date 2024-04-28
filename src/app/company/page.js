@@ -8,13 +8,31 @@ import { LiaFileInvoiceDollarSolid } from "react-icons/lia";
 import { SiFigshare } from "react-icons/si";
 import { GoHistory } from "react-icons/go";
 import { BiAnalyse, BiSpreadsheet } from "react-icons/bi";
-import { useEffect, useState } from "react";
+import { useRef, useState } from "react";
 import Information from "@/components/companyPage/Information";
 import HRL from "@/images/hrl.jpg"
 import Image from "next/image";
+import News from "@/components/companyPage/News";
+import Announcement from "@/components/companyPage/Announcement";
+import { Dropdown } from "flowbite-react";
 
 export default function Company() {
   const [selectedButton, setSelectedButton] = useState("Information");
+  const informationRef = useRef(null);
+  const newsRef = useRef(null);
+  const announcementsRef = useRef(null);
+  const dividendsRef = useRef(null);
+  const rightSharesRef = useRef(null);
+  const priceHistoryRef = useRef(null);
+  const floorsheetRef = useRef(null);
+  const brokerAnalysisRef = useRef(null);
+  const fundamentalsRef = useRef(null);
+  const financialReportsRef = useRef(null);
+  const compareStocksRef = useRef(null);
+
+  const handleButtonClick = (ref) => {
+    ref.current.scrollIntoView({ behavior: "smooth" });
+  };
 
   const buttonList = [
     { name: "Information", icon: <IoIosInformationCircleOutline /> },
@@ -44,17 +62,16 @@ export default function Company() {
       </div>
 
         <div className=" p-2 grid bg-gray-100 dark:bg-slate-900 grid-cols-12 gap-2 ">
-          <div className="p-2 rounded md:col-span-2 hidden md:block bg-gray-200 dark:bg-gray-800 ">
+          <div className="p-2 mb-2 rounded-md md:col-span-2 hidden md:block bg-gray-200 dark:bg-gray-800 ">
             <div class="w-100 h-max sticky top-[0]">
               <ul class="flex-column space-y space-y-4 text-sm font-medium text-gray-500 dark:text-gray-400 mb-4">
                 {buttonList.map((item) => (
                   <li>
-                    <a
-                      href="#"
-                      class={`inline-flex relative items-center px-3 py-2 rounded-lg ${
+                    <button
+                      class={`relative inline-flex items-center px-3 py-2 rounded-lg ${
                         selectedButton === item.name
                           ? "text-white bg-gray-600"
-                          : "dark:text-white text-black bg-gray-200 dark:bg-gray-800"
+                          : "text-gray-400 bg-gray-200 dark:bg-gray-800"
                       } active w-full `}
                       aria-current="page"
                       onClick={() => {
@@ -62,16 +79,50 @@ export default function Company() {
                       }}
                     >
                       <div className="mr-2">{item.icon}</div>
-
                       {item.name}
-                    </a>
+                    </button>
                   </li>
                 ))}
               </ul>
             </div>
           </div>
-          <div className="w-full p-3 rounded md:col-span-10 col-span-12 bg-gray-200 dark:bg-gray-600 mr-3">
-            <Information />
+          <div className="p-2 rounded block col-span-12 md:hidden bg-gray-200 dark:bg-slate-800 ">
+            <Dropdown
+              label={selectedButton}
+              style={{color: "white", borderColor: "gray"}}
+            >
+              {buttonList.map((item) => (
+                <Dropdown.Item
+                  key={item.name}
+                  className="text-white bg-gray-600"
+                  onClick={() => {
+                    setSelectedButton(item.ref);
+                  }}
+                >
+                  {item.name}
+                </Dropdown.Item>
+              ))}
+            </Dropdown>
+          </div>
+ 
+          <div className="col-span-12 md:col-span-10 p-2 bg-gray-200 dark:bg-gray-600 rounded-md mb-2 mr-3">
+            <div className="grid grid-cols-12 gap-4 dark:bg-gray-600">
+              <div className="col-span-12" ref={informationRef}>
+                <div className="dark:bg-gray-700 rounded-lg p-4 shadow-md mt-2">
+                  <Information />
+                </div>
+              </div>
+              <div className="col-span-12 md:col-span-6" ref={newsRef}>
+                <div className="dark:bg-gray-700 rounded-lg p-4 shadow-md mt-2">
+                  <News />
+                </div>
+              </div>
+              <div className="col-span-12 md:col-span-6 sticky h-[0]" ref={announcementsRef}>
+                <div className="dark:bg-gray-700 rounded-lg p-4 shadow-md mt-2">
+                  <Announcement />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </main>
