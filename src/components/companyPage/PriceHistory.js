@@ -1,5 +1,7 @@
+"use client";
 import React, { useState, useEffect } from "react";
 import { PiChartLineDownBold, PiChartLineUpBold } from "react-icons/pi";
+import useWindowSize from "@/components/useWindowSize";
 
 const PriceHistory = () => {
   const [priceHistory, setPriceHistory] = useState([]);
@@ -13,6 +15,12 @@ const PriceHistory = () => {
     startDate: null,
     endDate: null,
   });
+
+  const { width } = useWindowSize();
+
+  if (typeof window === 'undefined') {
+    return null;
+  }
 
   useEffect(() => {
     getPriceHistoryInfo();
@@ -70,7 +78,7 @@ const PriceHistory = () => {
     setConfig((prevConfig) => ({
       ...prevConfig,
       pageSize: pageSize,
-      page: 1, // Reset page number to 1 when page size changes
+      page: 1, 
     }));
   };
 
