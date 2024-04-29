@@ -15,7 +15,7 @@ const SummaryComponent = ({ summaryData, icons }) => {
 
   return (
     <div className="bg-gray-700 rounded-lg p-4 shadow-md">
-      <h2 className="text-lg font-semibold mb-4">Summary</h2>
+      <h2 className="text-lg text-white font-semibold mb-4">Summary</h2>
       <ResponsiveContainer width="100%" height={300}>
         <PieChart>
           <Pie
@@ -40,7 +40,7 @@ const SummaryComponent = ({ summaryData, icons }) => {
             <div className="flex items-center justify-between mb-3">
               <div>
                 <p className="text-sm text-gray-400">{item.detail}</p>
-                <p className="text-lg font-semibold">{item.value}</p> 
+                <p className="text-lg text-white font-semibold">{item.value}</p> 
               </div>
               <div className="w-8 h-8bg-gray-800 rounded-full flex items-center justify-center">
                 <Image src={icons[index]} alt={`Icon ${index}`} width={32} height={32} />

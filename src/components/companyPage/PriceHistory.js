@@ -120,11 +120,11 @@ const PriceHistory = () => {
 
     return (
       <div className="flex justify-center">
-        <button onClick={handlePreviousPage} disabled={config.page === 1} className="bg-blue-500 text-white px-3 py-1 rounded-lg mr-2">
+        <button onClick={handlePreviousPage} disabled={config.page === 1} className="bg-blue-300 text-white px-3 py-1 rounded-lg mr-2">
           Previous
         </button>
         {renderPaginatedNumbers()}
-        <button onClick={handleNextPage} disabled={config.page === config.totalPage} className="bg-blue-500 text-white px-3 py-1 rounded-lg ml-2">
+        <button onClick={handleNextPage} disabled={config.page === config.totalPage} className="bg-blue-300 text-white px-3 py-1 rounded-lg ml-2">
           Next
         </button>
       </div>
