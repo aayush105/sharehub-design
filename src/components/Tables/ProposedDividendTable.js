@@ -28,7 +28,7 @@ const ProposedDividendTable = () => {
                     Proposed Dividend
                 </div>
                 <div className="w-full relative h-[400px] overflow-auto shadow-md sm:rounded-lg">
-                    <table className="w-full h-full text-sm text-left rtl:text-righttext-gray-400">
+                    <table className="w-full h-full text-sm text-left rtl:text-right text-gray-400">
                         <thead className="sticky top-0 bg-gray-800 text-white uppercase">
                             <tr>
                             <th scope="col" className="px-4 py-2">

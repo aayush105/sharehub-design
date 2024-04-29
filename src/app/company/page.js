@@ -15,6 +15,9 @@ import Image from "next/image";
 import News from "@/components/companyPage/News";
 import Announcement from "@/components/companyPage/Announcement";
 import { Dropdown } from "flowbite-react";
+import RightShares from "@/components/companyPage/RightShares";
+import DividendHistory from "@/components/companyPage/DividendHistory";
+import PriceHistory from "@/components/companyPage/PriceHistory";
 
 export default function Company() {
   const [selectedButton, setSelectedButton] = useState("Information");
@@ -120,16 +123,25 @@ export default function Company() {
                   <News />
                 </div>
               </div>
-              <div className="col-span-12 md:col-span-12" ref={announcementsRef}>
+              <div className="col-span-12 md:col-span-3" ref={announcementsRef}>
                 <div className="bg-gray-700 rounded-lg p-4 shadow-md mt-2">
                   <Announcement />
+                </div>
+              </div><div className="col-span-12 md:col-span-9" ref={rightSharesRef}>
+                <div className="bg-gray-700 rounded-lg p-4 shadow-md mt-2">
+                  <RightShares />
                 </div>
               </div>
-              {/* <div className="col-span-12 md:col-span-6 sticky h-[0]" ref={announcementsRef}>
+              <div className="col-span-12 md:col-span-12 " ref={dividendsRef}>
                 <div className="bg-gray-700 rounded-lg p-4 shadow-md mt-2">
-                  <Announcement />
+                  <DividendHistory />
                 </div>
-              </div> */}
+              </div>
+              <div className="col-span-12 md:col-span-12 " ref={priceHistoryRef}>
+                <div className="bg-gray-700 rounded-lg p-4 shadow-md mt-2">
+                  <PriceHistory />
+                </div>
+              </div>
             </div>
           </div>
         </div>

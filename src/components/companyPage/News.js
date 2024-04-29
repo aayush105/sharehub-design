@@ -26,7 +26,7 @@ const News = () => {
       {news && (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {news.content.map((item) => (
-            <div key={item.id} className="p-4:bg-slate-800 rounded-md shadow-md">
+            <div key={item.id} className="p-4 bg-slate-800 rounded-md shadow-md">
               <div className="flex items-center mb-4">
                 {/* <img
                   src={item.imageUrl} 
@@ -35,7 +35,7 @@ const News = () => {
                 /> */}
                 <div>
                   <h3 className="text-lg font-semibold">{item.title}</h3>
-                  <p className="text-smtext-gray-400">{item.timeAgo}</p>
+                  <p className="text-sm text-gray-400">{item.timeAgo}</p>
                 </div>
               </div>
               <p className="text-smtext-gray-200">{item.summary}</p>

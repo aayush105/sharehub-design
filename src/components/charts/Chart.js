@@ -214,7 +214,7 @@ const Chart = () => {
                   duration === item
                     ? "bg-slate-500 text-gray-100"
                     : "text-gray-100 hover:text-gray-100"
-                } font-medium text-center rounded-lg hover:bg-slate-700 focus:ring-slate-800 focus:outline-none`}
+                } font-medium text-center rounded-lg focus:ring-4 focus:outline-none  hover:bg-slate-700 focus:ring-slate-800`}
               >
                 {item}
               </button>

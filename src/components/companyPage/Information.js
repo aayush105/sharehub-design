@@ -92,7 +92,7 @@ const Information = () => {
               <div><GiReceiveMoney size={40}/></div>           
             </div>
           </div>
-          <div className="col-span-2 md:col-span-1 p-4bg-slate-800 rounded-lg shadow-md">
+          <div className="col-span-2 md:col-span-1 p-4 bg-slate-800 rounded-lg shadow-md">
             <div className={`flex justify-between items-center ${isPositive(todayInfo.ltp) ? "text-green-600" : "text-red-600"}`}>
               <div>
                 <h3 className="text-lg font-semibold">LTP</h3>
@@ -107,7 +107,7 @@ const Information = () => {
               </div>
             </div>
           </div>
-          <div className="col-span-2 md:col-span-1 p-4bg-slate-800 rounded-lg shadow-md">
+          <div className="col-span-2 md:col-span-1 p-4 bg-slate-800 rounded-lg shadow-md">
             <div className={`flex justify-between items-center ${isPositive(todayInfo.change) ? "text-green-600" : "text-red-600"}`}>
               <div>
                 <h3 className="text-lg font-semibold">Change</h3>
@@ -171,7 +171,7 @@ const Information = () => {
       </div>
 
       <div className="col-span-12 md:col-span-4">
-        <div className="p-3bg-slate-800 rounded-md shadow-md">
+        <div className="p-3 bg-slate-800 rounded-md shadow-md">
           <h2 className="text-lg font-semibold mb-4">Performance Value</h2>
           <div className="flex justify-between mb-2">
             <p className="text-gray-400">Company</p>
@@ -205,13 +205,13 @@ const Information = () => {
       </div>
       
       <div className="col-span-12 md:col-span-8">
-        <div className="p-4bg-slate-800 rounded-md shadow-md">
+        <div className="p-4 bg-slate-800 rounded-md shadow-md">
           <HrlChart />
         </div>
       </div>
       
       <div className="col-span-12 md:col-span-4">
-        <div className="p-4bg-slate-800 rounded-md shadow-md">
+        <div className="p-4 bg-slate-800 rounded-md shadow-md">
           <h2 className="text-lg font-semibold mb-4">Today's Data</h2>
           <div className="flex justify-between mb-2">
             <p className="text-gray-400">Business Date</p>
@@ -308,7 +308,7 @@ const Information = () => {
 
 
       <div className="col-span-12 md:col-span-6">
-        <div className="p-4bg-slate-800 rounded-lg shadow-md">
+        <div className="p-4 bg-slate-800 rounded-lg shadow-md">
           <h2 className="text-lg font-semibold mb-4">Company General Information</h2>
           <div className="flex justify-between mb-2">
             <p className="text-gray-400">Share Registrar</p>
@@ -334,8 +334,8 @@ const Information = () => {
             <p className="text-gray-200">21-442662</p>
           </div>
           <div className="flex justify-between mb-2">
-            <p className="text-gray-200">Katahari-2, Morang</p>
             <p className="text-gray-400">Head Office</p>
+            <p className="text-gray-200">Katahari-2, Morang</p>
           </div>
           <div className="flex justify-between mb-2">
             <p className="text-gray-400">Management Head</p>
