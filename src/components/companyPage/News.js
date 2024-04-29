@@ -22,7 +22,7 @@ const News = () => {
 
   return (
     <div className="container mx-auto px-4 py-4">
-      <h1 className="text-3xl font-bold mb-4">Latest News</h1>
+      <h1 className="text-3xl text-white  font-bold mb-4">News</h1>
       {news && (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {news.content.map((item) => (
@@ -34,15 +34,15 @@ const News = () => {
                   className="w-16 h-16 rounded-full mr-4" 
                 /> */}
                 <div>
-                  <h3 className="text-lg font-semibold">{item.title}</h3>
+                  <h3 className="text-lg text-white  font-semibold">{item.title}</h3>
                   <p className="text-sm text-gray-400">{item.timeAgo}</p>
                 </div>
               </div>
-              <p className="text-smtext-gray-200">{item.summary}</p>
+              <p className="text-sm text-gray-200">{item.summary}</p>
               <div className="flex mt-4">
                 <ul className="flex space-x-2">
                   {item.stockSymbols.map((symbol) => (
-                    <li key={symbol} className="bg-gray-700 px-2 py-1 text-xs rounded">
+                    <li key={symbol} className="bg-gray-700 text-white px-2 py-1 text-xs rounded">
                       {symbol}
                     </li>
                   ))}

@@ -172,7 +172,7 @@ const Information = () => {
 
       <div className="col-span-12 md:col-span-4">
         <div className="p-3 bg-slate-800 rounded-md shadow-md">
-          <h2 className="text-lg font-semibold mb-4">Performance Value</h2>
+          <h2 className="text-lg text-white font-semibold mb-4">Performance Value</h2>
           <div className="flex justify-between mb-2">
             <p className="text-gray-400">Company</p>
             <p className="text-gray-200">{performanceValue.symbol}</p>
@@ -212,7 +212,7 @@ const Information = () => {
       
       <div className="col-span-12 md:col-span-4">
         <div className="p-4 bg-slate-800 rounded-md shadow-md">
-          <h2 className="text-lg font-semibold mb-4">Today's Data</h2>
+          <h2 className="text-lg text-white  font-semibold mb-4">Today's Data</h2>
           <div className="flex justify-between mb-2">
             <p className="text-gray-400">Business Date</p>
             <p className="text-gray-200">{todayInfo.businessDate}</p>
@@ -262,7 +262,7 @@ const Information = () => {
 
       <div className="col-span-12 md:col-span-6">
         <div className="p-4 bg-slate-800 rounded-lg shadow-md">
-          <h2 className="text-lg font-semibold mb-4">General Information</h2>
+          <h2 className="text-lg text-white  font-semibold mb-4">General Information</h2>
           <div className="flex justify-between mb-2">
             <p className="text-gray-400">Name</p>
             <p className="text-gray-200">{generalInfo.name}</p>
@@ -309,7 +309,7 @@ const Information = () => {
 
       <div className="col-span-12 md:col-span-6">
         <div className="p-4 bg-slate-800 rounded-lg shadow-md">
-          <h2 className="text-lg font-semibold mb-4">Company General Information</h2>
+          <h2 className="text-lg text-white  font-semibold mb-4">Company General Information</h2>
           <div className="flex justify-between mb-2">
             <p className="text-gray-400">Share Registrar</p>
             <p className="text-gray-200">NMB Capital Limited</p>

@@ -5,7 +5,7 @@ import Image from "next/image";
 const Announcements = () => {
   return (
     <div className="flex flex-col items-start justify-start w-full min-h-[345px]">
-      <h1 className="text-3xl font-bold mb-4">Announcement</h1>
+      <h1 className="text-3xl text-white font-bold mb-4">Announcement</h1>
       <div className="flex items-center justify-center w-full h-full">
         <div className="text-center mt-8">
           <Image

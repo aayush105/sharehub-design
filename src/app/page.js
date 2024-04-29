@@ -85,14 +85,16 @@ export default function HomePage() {
         </div>
         <div className="col-span-12 md:col-span-4">
           <SummaryComponent summaryData={summary} icons={icons} />
-          <div className="mt-4 bg-gray-700 rounded-lg p-4 shadow-md">
-            <h2 className="text-lg font-semibold mb-4">Recent News</h2>
-            {news.map((item, index) => (
-              <a key={index} href="#" className="block mb-4 bg-gray-800 rounded-lg p-4 shadow-md transition-transform duration-300 transform hover:-translate-y-1">
-                <h3 className="text-base font-semibold mb-1">{item.title}</h3>
-                <p className="text-sm text-gray-400">{item.timeAgo}</p>
-              </a>
-            ))}
+          <div className="mt-4 sticky top-0">
+            <div className="bg-gray-700 rounded-lg p-4 shadow-md">
+              <h2 className="text-lg font-semibold mb-4">Recent News</h2>
+              {news.map((item, index) => (
+                <a key={index} href="#" className="block mb-4 bg-gray-800 rounded-lg p-4 shadow-md transition-transform duration-300 transform hover:-translate-y-1">
+                  <h3 className="text-base font-semibold mb-1">{item.title}</h3>
+                  <p className="text-sm text-gray-400">{item.timeAgo}</p>
+                </a>
+              ))}
+            </div>
           </div>
         </div>
       </div>
@@ -107,4 +109,3 @@ export default function HomePage() {
     </main>
   );
 }
-

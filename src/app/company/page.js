@@ -46,11 +46,11 @@ export default function Company() {
     { name: "Dividends", icon: <AiOutlinePercentage />, ref: dividendsRef },
     { name: "Right Shares", icon: <SiFigshare />, ref: rightSharesRef },
     { name: "Price History", icon: <GoHistory />, ref: priceHistoryRef },
-    { name: "Floorsheet", icon: <BiSpreadsheet />, ref: floorsheetRef },
-    { name: "Broker Analysis", icon: <BiAnalyse />, ref: brokerAnalysisRef },
-    { name: "Fundamentals", icon: <LiaFileInvoiceDollarSolid />, ref: fundamentalsRef },
-    { name: "Financial Reports", icon: <TbReport />, ref: financialReportsRef },
-    { name: "Compare Stocks", icon: <AiOutlineStock />, ref: compareStocksRef },
+    { name: "Floorsheet", icon: <BiSpreadsheet />, ref: informationRef },
+    { name: "Broker Analysis", icon: <BiAnalyse />, ref: informationRef },
+    { name: "Fundamentals", icon: <LiaFileInvoiceDollarSolid />, ref: informationRef },
+    { name: "Financial Reports", icon: <TbReport />, ref: informationRef },
+    { name: "Compare Stocks", icon: <AiOutlineStock />, ref: informationRef },
   ];
 
   return (

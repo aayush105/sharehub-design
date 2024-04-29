@@ -112,7 +112,7 @@ const GainLoseTable = () => {
           </thead>
         </table>
       </div>
-      <div className="w-full overflow-y-auto rounded-lg shadow-md max-h-96" ref={tableRef}>
+      <div className="w-full overflow-y-auto rounded-lg shadow-md max-h-98" ref={tableRef}>
         <table className="w-full table-auto">
           <tbody>{renderRows(data)}</tbody>
         </table>

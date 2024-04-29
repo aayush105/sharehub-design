@@ -10,7 +10,7 @@ const Footer = () => {
       <div class="bg-gray-800 flex justify-between">
         <div class="w-full flex-col px-4 sm:px-6 text-gray-800 sm:grid md:grid-cols-5 sm:grid-cols-2 flex justify-between">
           <div class="p-5 flex flex-col items-start md:items-center">
-            <h3 class="flex flex-col items-start md:items-center font-bold text-xltext-slate-300 text-center">
+            <h3 class="flex flex-col items-start md:items-center font-bold text-xl text-slate-300 text-center">
               Softshala Pvt.Ltd
               <Image
                 width={100}

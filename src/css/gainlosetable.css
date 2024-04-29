@@ -1,0 +1,6 @@
+.gain-lose-table-container {
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Adjust z-index if necessary */
+  }
+  
