@@ -89,12 +89,33 @@ const PriceHistory = () => {
         </button>
       );
     }
+
+    const renderPaginatedNumbers = () => {
+      if (window.innerWidth <= 768) {
+        return (
+          <div className="flex flex-wrap justify-center">
+            {pages.map((page, index) => (
+              <div key={index} className="mr-2 mb-2">
+                {page}
+              </div>
+            ))}
+          </div>
+        );
+      } else {
+        return (
+          <div className="flex">
+            {pages}
+          </div>
+        );
+      }
+    };
+
     return (
-      <div className="flex">
+      <div className="flex justify-center">
         <button onClick={handlePreviousPage} disabled={config.page === 1} className="bg-blue-500 text-white px-3 py-1 rounded-lg mr-2">
           Previous
         </button>
-        {pages}
+        {renderPaginatedNumbers()}
         <button onClick={handleNextPage} disabled={config.page === config.totalPage} className="bg-blue-500 text-white px-3 py-1 rounded-lg ml-2">
           Next
         </button>

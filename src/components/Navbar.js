@@ -1,12 +1,12 @@
 import { RiSearchLine } from 'react-icons/ri'; 
-import { MenuList } from "@/menulist/Menulist";
-import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 import Image from 'next/image';
+import { MenuList } from "@/menulist/Menulist";
+import Link from "next/link";
 
-export default function Navbar({ setIsExpanded }) {
+export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [openSubMenuIndex, setOpenSubMenuIndex] = useState(null);
   const pathname = usePathname();
@@ -17,9 +17,9 @@ export default function Navbar({ setIsExpanded }) {
 
   const toggleSubMenu = (idx) => {
     if (openSubMenuIndex === idx) {
-      setOpenSubMenuIndex(null); 
+      setOpenSubMenuIndex(null);
     } else {
-      setOpenSubMenuIndex(idx); 
+      setOpenSubMenuIndex(idx);
     }
   };
 
@@ -39,21 +39,33 @@ export default function Navbar({ setIsExpanded }) {
             height={100}
             alt="logo"
           />
-          <div className="flex items-center bg-white rounded-md px-2 mr-4 ml-4 sm:w-1/3 md:w-auto">
+          <div className="hidden md:flex items-center bg-white rounded-md px-2 mr-4 ml-4">
             <input
               type="text"
               placeholder="Search"
-              className="py-1 px-2 bg-transparent border-none focus:outline-none text-gray-900 w-full"
+              className="py-1 px-2 bg-transparent border-none focus:outline-none text-gray-900"
             />
             <button className="focus:outline-none">
               <RiSearchLine className="h-4 w-4 text-slate-900" /> 
             </button>
           </div>
         </div>
-        <div className="hidden md:flex gap-2 items-center">
-          <button className="text-white text-sm font-bold py-1 px-4 rounded-md hover:bg-gray-700 hover:text-slate-300">Login</button>
+        <div className="hidden md:flex gap-3 items-center">
+          <button className="text-white text-sm mr-2 font-bold py-1 px-4 rounded-md hover:bg-gray-700 hover:text-slate-300">Login</button>
           <button className="text-white mr-10 text-sm font-bold py-1 px-4 bg-gray-600 rounded-md hover:bg-gray-700 hover:text-slate-300">Sign Up</button>
         </div>
+        {/* <div className="hidden md:flex gap-3 items-center">
+          {MenuList.map((item, idx) => (
+            <MenuItem
+              key={idx}
+              item={item}
+              pathname={pathname}
+              isOpen={openSubMenuIndex === idx}
+              onClick={() => toggleSubMenu(idx)}
+              closeMenu={closeMenu}
+            />
+          ))}
+        </div> */}
         <div className="flex md:hidden rounded-md">
           <button
             className="flex items-center px-3 py-2 border rounded text-white border-white hover:text-white hover:border-white"
@@ -70,7 +82,7 @@ export default function Navbar({ setIsExpanded }) {
           </button>
         </div>
       </div>
-      <div className={`${isMenuOpen ? "block" : "hidden"} md:hidden mt-4`}>
+      <div className={`${isMenuOpen ? "block" : "hidden"} md:hidden mt-4 w-full`}>
         <div className="px-2 pt-2 pb-3">
           {MenuList.map((item, idx) => (
             <MenuItem
@@ -84,7 +96,6 @@ export default function Navbar({ setIsExpanded }) {
           ))}
         </div>
       </div>
-      
       <div className="hidden md:flex gap-3 justify-center items-center">
         {/* <div className="flex items-center bg-white rounded-md px-2 mr-4">
           <input
@@ -120,9 +131,9 @@ const MenuItem = ({ item, pathname, isOpen, onClick, closeMenu }) => {
   return (
     <div className="text-sm relative">
       {item.subMenus ? (
-        <div className="rounded-md">
+        <div className="relative">
           <button
-            className={`inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-white bg-gray-800 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white`}
+            className={`inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-white bg-gray-800 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white w-full`}
             onClick={toggleSubMenu}
           >
             {item.title}
