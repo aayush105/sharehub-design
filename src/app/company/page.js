@@ -31,21 +31,23 @@ export default function Company() {
   const compareStocksRef = useRef(null);
 
   const handleButtonClick = (ref) => {
-    ref.current.scrollIntoView({ behavior: "smooth" });
+    if (ref && ref.current) {
+      ref.current.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   const buttonList = [
-    { name: "Information", icon: <IoIosInformationCircleOutline /> },
-    { name: "News", icon: <FaRegNewspaper /> },
-    { name: "Announcements", icon: <GrAnnounce /> },
-    { name: "Dividends", icon: <AiOutlinePercentage /> },
-    { name: "Right Shares", icon: <SiFigshare /> },
-    { name: "Price History", icon: <GoHistory /> },
-    { name: "Floorsheet", icon: <BiSpreadsheet /> },
-    { name: "Broker Analysis", icon: <BiAnalyse /> },
-    { name: "Fundamentals", icon: <LiaFileInvoiceDollarSolid /> },
-    { name: "Financial Reports", icon: <TbReport /> },
-    { name: "Compare Stocks", icon: <AiOutlineStock /> },
+    { name: "Information", icon: <IoIosInformationCircleOutline />, ref: informationRef },
+    { name: "News", icon: <FaRegNewspaper />, ref: newsRef },
+    { name: "Announcements", icon: <GrAnnounce />, ref: announcementsRef },
+    { name: "Dividends", icon: <AiOutlinePercentage />, ref: dividendsRef },
+    { name: "Right Shares", icon: <SiFigshare />, ref: rightSharesRef },
+    { name: "Price History", icon: <GoHistory />, ref: priceHistoryRef },
+    { name: "Floorsheet", icon: <BiSpreadsheet />, ref: floorsheetRef },
+    { name: "Broker Analysis", icon: <BiAnalyse />, ref: brokerAnalysisRef },
+    { name: "Fundamentals", icon: <LiaFileInvoiceDollarSolid />, ref: fundamentalsRef },
+    { name: "Financial Reports", icon: <TbReport />, ref: financialReportsRef },
+    { name: "Compare Stocks", icon: <AiOutlineStock />, ref: compareStocksRef },
   ];
 
   return (
@@ -60,22 +62,22 @@ export default function Company() {
         />
         <span>HRL Himalayan Reinsurance Limited</span>
       </div>
-
         <div className=" p-2 grid bg-gray-100 dark:bg-slate-900 grid-cols-12 gap-2 ">
           <div className="p-2 mb-2 rounded-md md:col-span-2 hidden md:block bg-gray-200 dark:bg-gray-800 ">
             <div class="w-100 h-max sticky top-[0]">
               <ul class="flex-column space-y space-y-4 text-sm font-medium text-gray-500 dark:text-gray-400 mb-4">
-                {buttonList.map((item) => (
-                  <li>
+                {buttonList.map((item, index) => (
+                  <li key={item.index}>
                     <button
                       class={`relative inline-flex items-center px-3 py-2 rounded-lg ${
                         selectedButton === item.name
                           ? "text-white bg-gray-600"
                           : "text-gray-400 bg-gray-200 dark:bg-gray-800"
-                      } active w-full `}
-                      aria-current="page"
+                      } w-full `}
+                      // aria-current="page"
                       onClick={() => {
                         setSelectedButton(item.name);
+                        handleButtonClick(item.ref);
                       }}
                     >
                       <div className="mr-2">{item.icon}</div>
@@ -96,7 +98,8 @@ export default function Company() {
                   key={item.name}
                   className="text-white bg-gray-600"
                   onClick={() => {
-                    setSelectedButton(item.ref);
+                    setSelectedButton(item.name);
+                    handleButtonClick(item.ref);
                   }}
                 >
                   {item.name}
@@ -112,16 +115,21 @@ export default function Company() {
                   <Information />
                 </div>
               </div>
-              <div className="col-span-12 md:col-span-6" ref={newsRef}>
+              <div className="col-span-12 md:col-span-12" ref={newsRef}>
                 <div className="dark:bg-gray-700 rounded-lg p-4 shadow-md mt-2">
                   <News />
                 </div>
               </div>
-              <div className="col-span-12 md:col-span-6 sticky h-[0]" ref={announcementsRef}>
+              <div className="col-span-12 md:col-span-12" ref={announcementsRef}>
                 <div className="dark:bg-gray-700 rounded-lg p-4 shadow-md mt-2">
                   <Announcement />
                 </div>
               </div>
+              {/* <div className="col-span-12 md:col-span-6 sticky h-[0]" ref={announcementsRef}>
+                <div className="dark:bg-gray-700 rounded-lg p-4 shadow-md mt-2">
+                  <Announcement />
+                </div>
+              </div> */}
             </div>
           </div>
         </div>
