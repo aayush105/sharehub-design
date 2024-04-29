@@ -22,14 +22,14 @@ const ProposedDividendTable = () => {
     }, []);
 
     return (
-        <div className="grid bg-gray-100 dark:bg-gray-600 grid-cols-12 gap-3 rounded-lg shadow-md mt-4">
+        <div className="grid bg-gray-600 grid-cols-12 gap-3 rounded-lg shadow-md mt-4">
             <div className=" w-full p-3 grid-cols-12 rounded col-span-12">
-                <div className="p-3 text-gray-600 dark:text-slate-300 mb-2 font-semibold text-lg">
+                <div className="p-3 text-slate-300 mb-2 font-semibold text-lg">
                     Proposed Dividend
                 </div>
                 <div className="w-full relative h-[400px] overflow-auto shadow-md sm:rounded-lg">
-                    <table className="w-full h-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-                        <thead className="sticky top-0 dark:bg-gray-800 text-white uppercase bg-gray-50">
+                    <table className="w-full h-full text-sm text-left rtl:text-righttext-gray-400">
+                        <thead className="sticky top-0 bg-gray-800 text-white uppercase">
                             <tr>
                             <th scope="col" className="px-4 py-2">
                                 Symbol

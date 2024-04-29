@@ -59,25 +59,25 @@ export default function HomePage() {
   }, []);
 
   return (
-    <main className="mx-auto px-4 py-3 dark:bg-slate-900">
+    <main className="mx-auto px-4 py-3 bg-slate-900">
       <div className="grid grid-cols-12 gap-4">
         <div className="col-span-12 md:col-span-8">
-          <div className="dark:bg-gray-700 rounded-lg p-4 shadow-md">
+          <div className="bg-gray-700 rounded-lg p-4 shadow-md">
             <Chart />
           </div>
           <div className="grid grid-cols-12 gap-4 mt-4">
             <div className="col-span-12">
-              <div className="dark:bg-gray-700 rounded-lg p-4 shadow-md">
+              <div className="bg-gray-700 rounded-lg p-4 shadow-md">
                 <IndexTable />
               </div>
             </div>
             <div className="col-span-12">
-              <div className="dark:bg-gray-700 rounded-lg p-4 shadow-md">
+              <div className="bg-gray-700 rounded-lg p-4 shadow-md">
                 <TopDataTable />
               </div>
             </div>
             <div className="col-span-12">
-              <div className="dark:bg-gray-700 rounded-lg p-4 shadow-md">
+              <div className="bg-gray-700 rounded-lg p-4 shadow-md">
                 <GainLoseTable />
               </div>
             </div>
@@ -85,12 +85,12 @@ export default function HomePage() {
         </div>
         <div className="col-span-12 md:col-span-4">
           <SummaryComponent summaryData={summary} icons={icons} />
-          <div className="mt-4 dark:bg-gray-700 rounded-lg p-4 shadow-md">
+          <div className="mt-4 bg-gray-700 rounded-lg p-4 shadow-md">
             <h2 className="text-lg font-semibold mb-4">Recent News</h2>
             {news.map((item, index) => (
-              <a key={index} href="#" className="block mb-4 bg-white dark:bg-gray-800 rounded-lg p-4 shadow-md transition-transform duration-300 transform hover:-translate-y-1">
+              <a key={index} href="#" className="block mb-4 bg-gray-800 rounded-lg p-4 shadow-md transition-transform duration-300 transform hover:-translate-y-1">
                 <h3 className="text-base font-semibold mb-1">{item.title}</h3>
-                <p className="text-sm text-gray-600 dark:text-gray-400">{item.timeAgo}</p>
+                <p className="text-sm text-gray-400">{item.timeAgo}</p>
               </a>
             ))}
           </div>
@@ -100,7 +100,7 @@ export default function HomePage() {
         <ProposedDividendTable />
       </div>
       <div className="col-span-12 mt-4">
-        <div className="dark:bg-gray-700 rounded-lg p-4 shadow-md">
+        <div className="bg-gray-700 rounded-lg p-4 shadow-md">
           <InvestmentTable />
         </div>
       </div>

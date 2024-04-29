@@ -31,7 +31,7 @@ export default function Navbar({ setIsExpanded }) {
   };
 
   return (
-    <nav className="dark:bg-gray-800 p-1 md:p-2">
+    <nav className="bg-gray-800 p-1 md:p-2">
       <div className="flex items-center justify-between">
         <div className="flex items-center flex-shrink-0 text-white">
           <Image

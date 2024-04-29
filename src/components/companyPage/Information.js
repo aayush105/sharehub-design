@@ -83,7 +83,7 @@ const Information = () => {
     <div className="grid grid-cols-12 gap-6">
       <div className="col-span-12 md:col-span-8">
         <div className="grid grid-cols-2 gap-4">
-          <div className="col-span-2 md:col-span-1 p-4 bg-white dark:bg-slate-800 rounded-lg shadow-md">
+          <div className="col-span-2 md:col-span-1 p-4 bg-slate-800 rounded-lg shadow-md">
             <div className={`flex justify-between items-center text-white`}>
               <div>
                 <h3 className="text-lg font-semibold">Open Price</h3>
@@ -92,7 +92,7 @@ const Information = () => {
               <div><GiReceiveMoney size={40}/></div>           
             </div>
           </div>
-          <div className="col-span-2 md:col-span-1 p-4 bg-white dark:bg-slate-800 rounded-lg shadow-md">
+          <div className="col-span-2 md:col-span-1 p-4bg-slate-800 rounded-lg shadow-md">
             <div className={`flex justify-between items-center ${isPositive(todayInfo.ltp) ? "text-green-600" : "text-red-600"}`}>
               <div>
                 <h3 className="text-lg font-semibold">LTP</h3>
@@ -107,7 +107,7 @@ const Information = () => {
               </div>
             </div>
           </div>
-          <div className="col-span-2 md:col-span-1 p-4 bg-white dark:bg-slate-800 rounded-lg shadow-md">
+          <div className="col-span-2 md:col-span-1 p-4bg-slate-800 rounded-lg shadow-md">
             <div className={`flex justify-between items-center ${isPositive(todayInfo.change) ? "text-green-600" : "text-red-600"}`}>
               <div>
                 <h3 className="text-lg font-semibold">Change</h3>
@@ -122,7 +122,7 @@ const Information = () => {
               </div>
             </div>
           </div>
-          <div className="col-span-2 md:col-span-1 p-4 bg-white dark:bg-slate-800 rounded-lg shadow-md">
+          <div className="col-span-2 md:col-span-1 p-4 bg-slate-800 rounded-lg shadow-md">
             <div className={`flex justify-between items-center ${isPositive(todayInfo.changePercent) ? "text-green-600" : "text-red-600"}`}>
               <div>
                 <h3 className="text-lg font-semibold">Change Percentage</h3>
@@ -137,7 +137,7 @@ const Information = () => {
               </div>
             </div>
           </div>
-          <div className="col-span-2 md:col-span-1 p-4 bg-white dark:bg-slate-800 rounded-lg shadow-md">
+          <div className="col-span-2 md:col-span-1 p-4 bg-slate-800 rounded-lg shadow-md">
             <div className={`flex justify-between items-center ${isPositive(todayInfo.lowPrice) ? "text-red-600" : "text-green-600"}`}>
               <div>
                 <h3 className="text-lg font-semibold">Low</h3>
@@ -152,7 +152,7 @@ const Information = () => {
               </div>
             </div>
           </div>
-          <div className="col-span-2 md:col-span-1 p-4 bg-white dark:bg-slate-800 rounded-lg shadow-md">
+          <div className="col-span-2 md:col-span-1 p-4 bg-slate-800 rounded-lg shadow-md">
             <div className={`flex justify-between items-center ${isPositive(todayInfo.highPrice) ? "text-green-600" : "text-red-600"}`}>
               <div>
                 <h3 className="text-lg font-semibold">High</h3>
@@ -171,154 +171,154 @@ const Information = () => {
       </div>
 
       <div className="col-span-12 md:col-span-4">
-        <div className="p-3 bg-white dark:bg-slate-800 rounded-md shadow-md">
+        <div className="p-3bg-slate-800 rounded-md shadow-md">
           <h2 className="text-lg font-semibold mb-4">Performance Value</h2>
           <div className="flex justify-between mb-2">
-            <p className="text-gray-600 dark:text-gray-400">Company</p>
-            <p className="text-gray-800 dark:text-gray-200">{performanceValue.symbol}</p>
+            <p className="text-gray-400">Company</p>
+            <p className="text-gray-200">{performanceValue.symbol}</p>
           </div>
           <div className="flex justify-between mb-2">
-            <p className="text-gray-600 dark:text-gray-400">One Year Yield</p>
-            <p className="text-gray-800 dark:text-gray-200">{performanceValue.oneYearYield}</p>
+            <p className="text-gray-400">One Year Yield</p>
+            <p className="text-gray-200">{performanceValue.oneYearYield}</p>
           </div>
           <div className="flex justify-between mb-2">
-            <p className="text-gray-600 dark:text-gray-400">Year</p>
-            <p className="text-gray-800 dark:text-gray-200">{performanceValue.year}</p>
+            <p className="text-gray-400">Year</p>
+            <p className="text-gray-200">{performanceValue.year}</p>
           </div>
           <div className="flex justify-between mb-2">
-            <p className="text-gray-600 dark:text-gray-400">EPS</p>
-            <p className="text-gray-800 dark:text-gray-200">{performanceValue.eps}</p>
+            <p className="text-gray-400">EPS</p>
+            <p className="text-gray-200">{performanceValue.eps}</p>
           </div>
           <div className="flex justify-between mb-2">
-            <p className="text-gray-600 dark:text-gray-400">PE Ratio</p>
-            <p className="text-gray-800 dark:text-gray-200">{performanceValue.peRatio}</p>
+            <p className="text-gray-400">PE Ratio</p>
+            <p className="text-gray-200">{performanceValue.peRatio}</p>
           </div>
           <div className="flex justify-between mb-2">
-            <p className="text-gray-600 dark:text-gray-400">Book Value</p>
-            <p className="text-gray-800 dark:text-gray-200">{performanceValue.bookValue}</p>
+            <p className="text-gray-400">Book Value</p>
+            <p className="text-gray-200">{performanceValue.bookValue}</p>
           </div>
           <div className="flex justify-between mb-2">
-            <p className="text-gray-600 dark:text-gray-400">Price per Book Value</p>
-            <p className="text-gray-800 dark:text-gray-200">{performanceValue.pricePerBookValue}</p>
+            <p className="text-gray-400">Price per Book Value</p>
+            <p className="text-gray-200">{performanceValue.pricePerBookValue}</p>
           </div>
         </div>
       </div>
       
       <div className="col-span-12 md:col-span-8">
-        <div className="p-4 bg-white dark:bg-slate-800 rounded-md shadow-md">
+        <div className="p-4bg-slate-800 rounded-md shadow-md">
           <HrlChart />
         </div>
       </div>
       
       <div className="col-span-12 md:col-span-4">
-        <div className="p-4 bg-white dark:bg-slate-800 rounded-md shadow-md">
+        <div className="p-4bg-slate-800 rounded-md shadow-md">
           <h2 className="text-lg font-semibold mb-4">Today's Data</h2>
           <div className="flex justify-between mb-2">
-            <p className="text-gray-600 dark:text-gray-400">Business Date</p>
-            <p className="text-gray-800 dark:text-gray-200">{todayInfo.businessDate}</p>
+            <p className="text-gray-400">Business Date</p>
+            <p className="text-gray-200">{todayInfo.businessDate}</p>
           </div>
           <div className="flex justify-between mb-2">
-            <p className="text-gray-600 dark:text-gray-400">Open Price</p>
-            <p className="text-gray-800 dark:text-gray-200">{todayInfo.openPrice}</p>
+            <p className="text-gray-400">Open Price</p>
+            <p className="text-gray-200">{todayInfo.openPrice}</p>
           </div>
           <div className="flex justify-between mb-2">
-            <p className="text-gray-600 dark:text-gray-400">High Price</p>
-            <p className="text-gray-800 dark:text-gray-200">{todayInfo.highPrice}</p>
+            <p className="text-gray-400">High Price</p>
+            <p className="text-gray-200">{todayInfo.highPrice}</p>
           </div>
           <div className="flex justify-between mb-2">
-            <p className="text-gray-600 dark:text-gray-400">Low Price</p>
-            <p className="text-gray-800 dark:text-gray-200">{todayInfo.lowPrice}</p>
+            <p className="text-gray-400">Low Price</p>
+            <p className="text-gray-200">{todayInfo.lowPrice}</p>
           </div>
           <div className="flex justify-between mb-2">
-            <p className="text-gray-600 dark:text-gray-400">Last Traded Price (LTP)</p>
-            <p className="text-gray-800 dark:text-gray-200">{todayInfo.ltp}</p>
+            <p className="text-gray-400">Last Traded Price (LTP)</p>
+            <p className="text-gray-200">{todayInfo.ltp}</p>
           </div>
           <div className="flex justify-between mb-2">
-            <p className="text-gray-600 dark:text-gray-400">Change Percent</p>
-            <p className="text-gray-800 dark:text-gray-200">{todayInfo.changePercent}</p>
+            <p className="text-gray-400">Change Percent</p>
+            <p className="text-gray-200">{todayInfo.changePercent}</p>
           </div>
           <div className="flex justify-between mb-2">
-            <p className="text-gray-600 dark:text-gray-400">Total Traded Quantity</p>
-            <p className="text-gray-800 dark:text-gray-200">{todayInfo.totalTradedQuantity}</p>
+            <p className="text-gray-400">Total Traded Quantity</p>
+            <p className="text-gray-200">{todayInfo.totalTradedQuantity}</p>
           </div>
           <div className="flex justify-between mb-2">
-            <p className="text-gray-600 dark:text-gray-400">Total Traded Value</p>
-            <p className="text-gray-800 dark:text-gray-200">{todayInfo.totalTradedValue}</p>
+            <p className="text-gray-400">Total Traded Value</p>
+            <p className="text-gray-200">{todayInfo.totalTradedValue}</p>
           </div>
           <div className="flex justify-between mb-2">
-            <p className="text-gray-600 dark:text-gray-400">Previous Day Close Price</p>
-            <p className="text-gray-800 dark:text-gray-200">{todayInfo.previousDayClosePrice}</p>
+            <p className="text-gray-400">Previous Day Close Price</p>
+            <p className="text-gray-200">{todayInfo.previousDayClosePrice}</p>
           </div>
           <div className="flex justify-between mb-2">
-            <p className="text-gray-600 dark:text-gray-400">Total Trades</p>
-            <p className="text-gray-800 dark:text-gray-200">{todayInfo.totalTrades}</p>
+            <p className="text-gray-400">Total Trades</p>
+            <p className="text-gray-200">{todayInfo.totalTrades}</p>
           </div>
           <div className="flex justify-between mb-3">
-            <p className="text-gray-600 dark:text-gray-400">Last Updated Time</p>
-            <p className="text-gray-800 dark:text-gray-200">{formattedDateTime(todayInfo.lastUpdatedTime)}</p>
+            <p className="text-gray-400">Last Updated Time</p>
+            <p className="text-gray-200">{formattedDateTime(todayInfo.lastUpdatedTime)}</p>
           </div>
         </div>
       </div>
 
       <div className="col-span-12 md:col-span-6">
-        <div className="p-4 bg-white dark:bg-slate-800 rounded-lg shadow-md">
+        <div className="p-4 bg-slate-800 rounded-lg shadow-md">
           <h2 className="text-lg font-semibold mb-4">General Information</h2>
           <div className="flex justify-between mb-2">
-            <p className="text-gray-600 dark:text-gray-400">Name</p>
-            <p className="text-gray-800 dark:text-gray-200">{generalInfo.name}</p>
+            <p className="text-gray-400">Name</p>
+            <p className="text-gray-200">{generalInfo.name}</p>
           </div>
           <div className="flex justify-between mb-2">
-            <p className="text-gray-600 dark:text-gray-400">Market Cap</p>
-            <p className="text-gray-800 dark:text-gray-200">{formatNumber(generalInfo.marketCap)}</p>
+            <p className="text-gray-400">Market Cap</p>
+            <p className="text-gray-200">{formatNumber(generalInfo.marketCap)}</p>
           </div>
           <div className="flex justify-between mb-2">
-            <p className="text-gray-600 dark:text-gray-400">Paid Up Capital</p>
-            <p className="text-gray-800 dark:text-gray-200">{formatNumber(generalInfo.paidUpCapital)}</p>
+            <p className="text-gray-400">Paid Up Capital</p>
+            <p className="text-gray-200">{formatNumber(generalInfo.paidUpCapital)}</p>
           </div>
           <div className="flex justify-between mb-2">
-            <p className="text-gray-600 dark:text-gray-400">Face Value</p>
-            <p className="text-gray-800 dark:text-gray-200">{generalInfo.faceValue}</p>
+            <p className="text-gray-400">Face Value</p>
+            <p className="text-gray-200">{generalInfo.faceValue}</p>
           </div>
           <div className="flex justify-between mb-2">
-            <p className="text-gray-600 dark:text-gray-400">Listed Shares</p>
-            <p className="text-gray-800 dark:text-gray-200">{generalInfo.listedShares}</p>
+            <p className="text-gray-400">Listed Shares</p>
+            <p className="text-gray-200">{generalInfo.listedShares}</p>
           </div>
           <div className="flex justify-between mb-2">
-            <p className="text-gray-600 dark:text-gray-400">Public Shares</p>
-            <p className="text-gray-800 dark:text-gray-200">{generalInfo.publicShares}</p>
+            <p className="text-gray-400">Public Shares</p>
+            <p className="text-gray-200">{generalInfo.publicShares}</p>
           </div>
           <div className="flex justify-between mb-2">
-            <p className="text-gray-600 dark:text-gray-400">Promoter Shares</p>
-            <p className="text-gray-800 dark:text-gray-200">{generalInfo.promoterShares}</p>
+            <p className="text-gray-400">Promoter Shares</p>
+            <p className="text-gray-200">{generalInfo.promoterShares}</p>
           </div>
           <div className="flex justify-between mb-2">
-            <p className="text-gray-600 dark:text-gray-400">52 Week High</p>
-            <p className="text-gray-800 dark:text-gray-200">{generalInfo.fiftyTwoWeekHigh}</p>
+            <p className="text-gray-400">52 Week High</p>
+            <p className="text-gray-200">{generalInfo.fiftyTwoWeekHigh}</p>
           </div>
           <div className="flex justify-between mb-2">
-            <p className="text-gray-600 dark:text-gray-400">52 Week Low</p>
-            <p className="text-gray-800 dark:text-gray-200">{generalInfo.fiftyTwoWeekLow}</p>
+            <p className="text-gray-400">52 Week Low</p>
+            <p className="text-gray-200">{generalInfo.fiftyTwoWeekLow}</p>
           </div>
           <div className="flex justify-between">
-            <p className="text-gray-600 dark:text-gray-400">Listing Date</p>
-            <p className="text-gray-800 dark:text-gray-200">{formattedDateTime(generalInfo.listingDate)}</p>
+            <p className="text-gray-400">Listing Date</p>
+            <p className="text-gray-200">{formattedDateTime(generalInfo.listingDate)}</p>
           </div>
         </div>
       </div>
 
 
       <div className="col-span-12 md:col-span-6">
-        <div className="p-4 bg-white dark:bg-slate-800 rounded-lg shadow-md">
+        <div className="p-4bg-slate-800 rounded-lg shadow-md">
           <h2 className="text-lg font-semibold mb-4">Company General Information</h2>
           <div className="flex justify-between mb-2">
-            <p className="text-gray-600 dark:text-gray-400">Share Registrar</p>
-            <p className="text-gray-800 dark:text-gray-200">NMB Capital Limited</p>
+            <p className="text-gray-400">Share Registrar</p>
+            <p className="text-gray-200">NMB Capital Limited</p>
           </div>
           <div className="flex justify-between mb-2">
-            <p className="text-gray-600 dark:text-gray-400">Website</p>
+            <p className="text-gray-400">Website</p>
             <a
               href="https://jeevanbikasmf.com/"
-              className="text-blue-500 hover:text-blue-700 dark:text-blue-300 dark:hover:text-blue-100"
+              className="text-blue-300 hover:text-blue-100"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -326,36 +326,36 @@ const Information = () => {
             </a>
           </div>
           <div className="flex justify-between mb-2">
-            <p className="text-gray-600 dark:text-gray-400">Email</p>
-            <p className="text-gray-800 dark:text-gray-200">info@jeevanbikasmf.com</p>
+            <p className="text-gray-400">Email</p>
+            <p className="text-gray-200">info@jeevanbikasmf.com</p>
           </div>
           <div className="flex justify-between mb-2">
-            <p className="text-gray-600 dark:text-gray-400">Contact No.</p>
-            <p className="text-gray-800 dark:text-gray-200">21-442662</p>
+            <p className="text-gray-400">Contact No.</p>
+            <p className="text-gray-200">21-442662</p>
           </div>
           <div className="flex justify-between mb-2">
-            <p className="text-gray-600 dark:text-gray-400">Head Office</p>
-            <p className="text-gray-800 dark:text-gray-200">Katahari-2, Morang</p>
+            <p className="text-gray-200">Katahari-2, Morang</p>
+            <p className="text-gray-400">Head Office</p>
           </div>
           <div className="flex justify-between mb-2">
-            <p className="text-gray-600 dark:text-gray-400">Management Head</p>
-            <p className="text-gray-800 dark:text-gray-200">Mr. Sanjaya Kumar Mandal</p>
+            <p className="text-gray-400">Management Head</p>
+            <p className="text-gray-200">Mr. Sanjaya Kumar Mandal</p>
           </div>
           <div className="flex justify-between mb-2">
-            <p className="text-gray-600 dark:text-gray-400">Promoter Holding</p>
-            <p className="text-gray-800 dark:text-gray-200">67.00%</p>
+            <p className="text-gray-400">Promoter Holding</p>
+            <p className="text-gray-200">67.00%</p>
           </div>
           <div className="flex justify-between mb-2">
-            <p className="text-gray-600 dark:text-gray-400">Public Holding</p>
-            <p className="text-gray-800 dark:text-gray-200">33.00%</p>
+            <p className="text-gray-400">Public Holding</p>
+            <p className="text-gray-200">33.00%</p>
           </div>
           <div className="flex justify-between mb-2">
-            <p className="text-gray-600 dark:text-gray-400">Promoter</p>
-            <p className="text-gray-800 dark:text-gray-200">{todayInfo.totalTrades}</p>
+            <p className="text-gray-400">Promoter</p>
+            <p className="text-gray-200">{todayInfo.totalTrades}</p>
           </div>
           <div className="flex justify-between">
-            <p className="text-gray-600 dark:text-gray-400">Government Holding</p>
-            <p className="text-gray-800 dark:text-gray-200">Foreign Ownership</p>
+            <p className="text-gray-400">Government Holding</p>
+            <p className="text-gray-200">Foreign Ownership</p>
           </div>
         </div>
       </div>

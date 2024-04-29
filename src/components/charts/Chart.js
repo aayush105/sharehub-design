@@ -167,12 +167,14 @@ const Chart = () => {
       <div className="w-full h-[400px]">
         <div className="w-full flex justify-between items-center">
           <div>
-            <div className="text-lg text-gray-600 dark:text-slate-300 font-bold">
+            <div className="text-lg text-slate-300 font-bold">
               Nepse Index
             </div>
             <div className="text-lg text-red-500">
               {info.nepseValue}
+              {" "}
               {info.change}
+              {" "}
               {info.percentChange}
             </div>
           </div>
@@ -211,8 +213,8 @@ const Chart = () => {
                 className={`px-2 py-1.5 text-sm ${
                   duration === item
                     ? "bg-slate-500 text-gray-100"
-                    : "dark:text-gray-100 text-gray-700 hover:text-gray-100"
-                } font-medium text-center rounded-lg hover:bg-slate-800 focus:ring-4 focus:outline-none focus:ring-slate-300 dark:hover:bg-slate-700 dark:focus:ring-slate-800`}
+                    : "text-gray-100 hover:text-gray-100"
+                } font-medium text-center rounded-lg hover:bg-slate-700 focus:ring-slate-800 focus:outline-none`}
               >
                 {item}
               </button>
@@ -226,7 +228,9 @@ const Chart = () => {
                 onChange={(e) => {
                   setDropValue(e.target.value);
                 }}
-                className="bg-gray-50 py-2 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-slate-500 focus:border-slate-500 block w-full p-2 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-slate-500 dark:focus:border-slate-500"
+                className="py-2 border text-sm 
+                rounded-lg focus:ring-slate-500 focus:border-slate-500 block w-full p-2 
+                bg-gray-700 border-gray-600 placeholder-gray-400 text-white"
               >
                 <option value="value">Value</option>
                 <option value="turnover">Turnover</option>

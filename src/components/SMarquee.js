@@ -19,12 +19,12 @@ const SMarquee = ({ data }) => {
 
   return (
     <div className="marquee-container">
-      <Marquee  pauseOnHover style={{ overflowX: "hidden" }} className="dark:bg-slate-900">
+      <Marquee  pauseOnHover style={{ overflowX: "hidden" }} className="bg-slate-900">
         <div className="marquee-content">
           {data?.map((item, index) => (
             <div key={index} className="relative py-3 sm:max-w-xl sm:mx-auto">
-              <button className="group cursor-pointer relative flex items-center bg-white dark:bg-gray-700 hover:dark:bg-gray-800 text-gray-800 font-semibold py-1 px-4 border border-gray-400 rounded shadow">
-                <p className="text-sm text-gray-600 dark:text-slate-300">
+              <button className="group cursor-pointer relative flex items-centerbg-gray-700 hover:bg-gray-800 text-gray-800 font-semibold py-1 px-4 border border-gray-400 rounded shadow">
+                <p className="text-sm text-slate-300">
                   {item.symbol} {item.lastTradedPrice} &#40;{" "}
                   {(item.openPrice - item.lastTradedPrice).toFixed(2)} &#41;
                 </p>

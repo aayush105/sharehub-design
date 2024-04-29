@@ -14,7 +14,7 @@ const SummaryComponent = ({ summaryData, icons }) => {
   const colorScale = scaleOrdinal(schemeCategory10);
 
   return (
-    <div className="dark:bg-gray-700 rounded-lg p-4 shadow-md">
+    <div className="bg-gray-700 rounded-lg p-4 shadow-md">
       <h2 className="text-lg font-semibold mb-4">Summary</h2>
       <ResponsiveContainer width="100%" height={300}>
         <PieChart>
@@ -36,13 +36,13 @@ const SummaryComponent = ({ summaryData, icons }) => {
       </ResponsiveContainer>
       <div className="mt-4">
         {summaryData.map((item, index) => (
-          <div key={index} className="bg-white dark:bg-gray-800 rounded-lg p-3 shadow-md mb-3 transition-transform duration-300 transform hover:-translate-y-1">
+          <div key={index} className="bg-gray-800 rounded-lg p-3 shadow-md mb-3 transition-transform duration-300 transform hover:-translate-y-1">
             <div className="flex items-center justify-between mb-3">
               <div>
-                <p className="text-sm text-gray-600 dark:text-gray-400">{item.detail}</p>
+                <p className="text-sm text-gray-400">{item.detail}</p>
                 <p className="text-lg font-semibold">{item.value}</p> 
               </div>
-              <div className="w-8 h-8 dark:bg-gray-800 rounded-full flex items-center justify-center">
+              <div className="w-8 h-8bg-gray-800 rounded-full flex items-center justify-center">
                 <Image src={icons[index]} alt={`Icon ${index}`} width={32} height={32} />
               </div>
             </div>

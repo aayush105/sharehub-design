@@ -114,7 +114,7 @@ const IndexTable = () => {
       <div className="w-full overflow-hidden overflow-y-auto rounded-lg shadow-md max-h-96">
         <table className="w-full table-auto text-sm">
           <thead className="sticky top-0 uppercase">
-            <tr className="dark:bg-gray-800 text-white">
+            <tr className="bg-gray-800 text-white">
               <th className="px-4 py-2 text-left">Indices</th>
               <th className="px-4 py-2">Value</th>
               <th className="px-4 py-2">Change</th>

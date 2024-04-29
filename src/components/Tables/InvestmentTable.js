@@ -92,7 +92,7 @@ const InvestmentTable = () => {
 
   return (
     <div className='flex flex-col justify-center'>
-      <div className='p-3 text-gray-600 dark:text-slate-300 nb-2 font-semibold text-lg'>
+      <div className='p-3 text-slate-300 nb-2 font-semibold text-lg'>
         Investment
       </div>
       <Tabs value={tabIndex} onChange={handleTabChange}>
@@ -117,7 +117,7 @@ const InvestmentTable = () => {
       <div className="w-full overflow-x-auto rounded-lg shadow-md max-h-96">
         <table className="w-full table-auto">
           <thead className="sticky top-0">
-            <tr className="dark:bg-gray-800 text-white">
+            <tr className="bg-gray-800 text-white">
               <th className="px-4 py-2 text-left">Symbol</th>
               <th className="px-4 py-2">Company</th>
               <th className="px-4 py-2">Units</th>

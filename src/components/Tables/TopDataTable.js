@@ -111,7 +111,7 @@ const TopDataTable = () => {
       <div className="w-full overflow-hidden rounded-lg shadow-md max-h-96">
         <table className="w-full table-auto text-sm">
           <thead className="uppercase">
-            <tr className="dark:bg-gray-800 text-white">
+            <tr className="bg-gray-800 text-white">
               <th className="px-4 py-2">Symbol</th>
               {tabIndex === "turnover" && <th className="px-4 py-2">Turnover</th>}
               {tabIndex === "tradedShares" && <th className="px-4 py-2">Shares Traded</th>}

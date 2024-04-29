@@ -53,7 +53,7 @@ export default function Company() {
   return (
     <>
       <main>
-      <div className="col-span-12 text-2xl bg-gray-100 dark:bg-slate-900 font-bold p-2 text-gray-600 dark:text-slate-300 flex items-center">
+      <div className="col-span-12 text-2xl bg-slate-900 font-bold p-2 text-slate-300 flex items-center">
         <Image 
           src={HRL}
           height={50}
@@ -62,17 +62,17 @@ export default function Company() {
         />
         <span>HRL Himalayan Reinsurance Limited</span>
       </div>
-        <div className=" p-2 grid bg-gray-100 dark:bg-slate-900 grid-cols-12 gap-2 ">
-          <div className="p-2 mb-2 rounded-md md:col-span-2 hidden md:block bg-gray-200 dark:bg-gray-800 ">
+        <div className=" p-2 grid bg-slate-900 grid-cols-12 gap-2 ">
+          <div className="p-2 mb-2 rounded-md md:col-span-2 hidden md:block bg-gray-800 ">
             <div class="w-100 h-max sticky top-[0]">
-              <ul class="flex-column space-y space-y-4 text-sm font-medium text-gray-500 dark:text-gray-400 mb-4">
+              <ul class="flex-column space-y space-y-4 text-sm font-medium text-gray-400 mb-4">
                 {buttonList.map((item, index) => (
                   <li key={item.index}>
                     <button
                       class={`relative inline-flex items-center px-3 py-2 rounded-lg ${
                         selectedButton === item.name
                           ? "text-white bg-gray-600"
-                          : "text-gray-400 bg-gray-200 dark:bg-gray-800"
+                          : "text-gray-400 bg-gray-800"
                       } w-full `}
                       // aria-current="page"
                       onClick={() => {
@@ -88,7 +88,7 @@ export default function Company() {
               </ul>
             </div>
           </div>
-          <div className="p-2 rounded block col-span-12 md:hidden bg-gray-200 dark:bg-slate-800 ">
+          <div className="p-2 rounded block col-span-12 md:hidden bg-slate-800 ">
             <Dropdown
               label={selectedButton}
               style={{color: "white", borderColor: "gray"}}
@@ -108,25 +108,25 @@ export default function Company() {
             </Dropdown>
           </div>
  
-          <div className="col-span-12 md:col-span-10 p-2 bg-gray-200 dark:bg-gray-600 rounded-md mb-2 mr-3">
-            <div className="grid grid-cols-12 gap-4 dark:bg-gray-600">
+          <div className="col-span-12 md:col-span-10 p-2 bg-gray-600 rounded-md mb-2 mr-3">
+            <div className="grid grid-cols-12 gap-4 bg-gray-600">
               <div className="col-span-12" ref={informationRef}>
-                <div className="dark:bg-gray-700 rounded-lg p-4 shadow-md mt-2">
+                <div className="bg-gray-700 rounded-lg p-4 shadow-md mt-2">
                   <Information />
                 </div>
               </div>
               <div className="col-span-12 md:col-span-12" ref={newsRef}>
-                <div className="dark:bg-gray-700 rounded-lg p-4 shadow-md mt-2">
+                <div className="bg-gray-700 rounded-lg p-4 shadow-md mt-2">
                   <News />
                 </div>
               </div>
               <div className="col-span-12 md:col-span-12" ref={announcementsRef}>
-                <div className="dark:bg-gray-700 rounded-lg p-4 shadow-md mt-2">
+                <div className="bg-gray-700 rounded-lg p-4 shadow-md mt-2">
                   <Announcement />
                 </div>
               </div>
               {/* <div className="col-span-12 md:col-span-6 sticky h-[0]" ref={announcementsRef}>
-                <div className="dark:bg-gray-700 rounded-lg p-4 shadow-md mt-2">
+                <div className="bg-gray-700 rounded-lg p-4 shadow-md mt-2">
                   <Announcement />
                 </div>
               </div> */}
